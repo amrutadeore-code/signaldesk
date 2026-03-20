@@ -7,6 +7,19 @@ SignalDesk is an AI-driven customer risk intelligence platform designed to help 
 
 ---
 
+## 🎥 Product Demo
+
+👉 Watch a 2-minute walkthrough of SignalDesk:  
+[▶️ Demo Video] https://www.loom.com/share/ec17470722a24040b8c656c9cc9a28f6
+
+### What the demo shows:
+- Portfolio-level risk visibility across customer accounts  
+- Account-level risk trends and explanations  
+- Scenario simulation for proactive decision-making  
+- Configurable scoring models with portfolio impact preview  
+
+---
+
 ## 💡 Why SignalDesk?
 
 In most organizations, customer risk is:
