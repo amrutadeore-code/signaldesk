@@ -161,6 +161,7 @@ This will:
 ![Account Detail](docs/account_detail.png)
 ![Scoring Config](docs/scoring_config.png)
 ![Risk Simulator](docs/risk_simulator.png)
+![Reports](docs/reports.png)
 ```
 
 ---
