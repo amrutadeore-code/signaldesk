@@ -58,6 +58,34 @@ SignalDesk solves this by:
 * Understand *why* changes happen
 
 ---
+### 🧠 How Risk Scoring Works
+
+SignalDesk uses a configurable scoring engine to evaluate customer risk based on multiple signals across support, engagement, and product usage.
+*Each account is scored using a weighted combination of metrics such as:
+*Ticket volume and reopen rates
+*SLA breaches and resolution times
+*Customer sentiment and CSAT
+*Engagement recency and product usage trends
+
+Each metric has:
+*A defined direction (higher is better or worse)
+*Configurable thresholds
+*A weight that determines its impact on the final score
+
+The system then:
+*Normalizes individual signals into comparable risk contributions
+*Aggregates weighted contributions into a total risk score
+*Maps the score into a risk band (Low, Medium, High)
+*Identifies the primary risk driver for explainability
+
+This approach enables:
+*Transparent and explainable scoring
+*Easy tuning of the model via configuration
+*Scenario simulation and portfolio-wide impact analysis
+
+The scoring model is intentionally modular to support future integration with machine learning–based signal weighting and anomaly detection.
+
+---
 
 ## 🏗️ Tech Stack
 

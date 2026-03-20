@@ -81,29 +81,38 @@ def evaluate_metric(value: Any, rule: dict[str, Any], direction: str) -> float:
 
 
 def build_recommended_actions(contributions: list[tuple[str, float]]) -> list[str]:
-    actions: list[str] = []
+    if not contributions:
+        return ["Continue monitoring account health"]
 
-    driver_names = {metric for metric, points in contributions[:3] if points > 0}
+    top_driver = contributions[0][0]
+    print("DEBUG top_driver:", top_driver)
 
-    if "reopened_tickets_30d" in driver_names or "open_tickets_30d" in driver_names:
-        actions.append("Assign a senior support engineer to review active issues")
+    if top_driver == "open_tickets_30d":
+        return ["Assign a senior support engineer to reduce ticket backlog"]
 
-    if "sentiment_score" in driver_names:
-        actions.append("Schedule proactive outreach to address customer concerns")
+    elif top_driver == "avg_resolution_hrs":
+        return ["Escalate to engineering leadership to address resolution delays"]
 
-    if "known_bug_flag" in driver_names or "sev1_tickets_30d" in driver_names:
-        actions.append("Review product defect impact and provide workaround guidance")
+    elif top_driver == "reopened_tickets_30d":
+        return ["Perform root cause analysis to prevent recurring issues"]
 
-    if "days_to_renewal" in driver_names:
-        actions.append("Coordinate with Customer Success before renewal risk increases")
+    elif top_driver == "sentiment_score":
+        return ["Schedule executive check-in to address customer concerns"]
 
-    if "usage_change_pct_30d" in driver_names or "login_change_pct_30d" in driver_names:
-        actions.append("Investigate product engagement decline and adoption blockers")
+    elif top_driver == "csat_avg_90d":
+        return ["Launch a structured customer recovery plan"]
 
-    if not actions:
-        actions.append("Continue monitoring account health and support activity")
+    elif top_driver in ("usage_change_pct_30d", "login_change_pct_30d"):
+        return ["Conduct product adoption and engagement review"]
 
-    return actions[:3]
+    elif top_driver == "days_to_renewal":
+        return ["Initiate renewal risk mitigation plan with CSM team"]
+
+    elif top_driver in ("known_bug_flag", "sev1_tickets_30d"):
+        return ["Prioritize bug resolution and communicate timeline to customer"]
+
+    else:
+        return ["Monitor account and maintain engagement cadence"]
 
 
 def score_account(snapshot: dict[str, Any], rules: dict[str, dict[str, Any]]) -> dict[str, Any]:
