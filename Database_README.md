@@ -323,8 +323,3 @@ This is the **final output layer** powering:
 5. Run scoring engine
 
 ---
-
-If you want next step, I can:
-
-* add a **Mermaid ER diagram** (super clean for GitHub rendering), or
-* align this doc **exactly with your scoring engine code (metric-by-metric)** so it becomes investor/demo-ready.
