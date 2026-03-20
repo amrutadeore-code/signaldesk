@@ -152,17 +152,43 @@ This will:
 
 ---
 
-## 📸 Screenshots (add these)
+## 📸 Screenshots
 
-> Add screenshots in a `/docs` folder and reference them here
 
-```md
+## 📸 Screenshots
+
+### 🏠 Home Dashboard  
+Portfolio-level view of customer risk, key drivers, and top accounts requiring attention.
+
 ![Home Dashboard](docs/home.png)
+
+---
+
+### 🔍 Account Detail  
+Deep dive into a single account with historical trends, signal breakdown, and AI-generated risk explanation.
+
 ![Account Detail](docs/account_detail.png)
+
+---
+
+### ⚙️ Scoring Configuration  
+Customize scoring rules and preview portfolio-wide impact.
+
 ![Scoring Config](docs/scoring_config.png)
+
+---
+
+### 🧪 Risk Simulator  
+Simulate real-world scenarios and see score and band changes instantly.
+
 ![Risk Simulator](docs/risk_simulator.png)
+
+---
+
+### 📊 Reports & Insights  
+Analyze portfolio-wide trends and risk distribution.
+
 ![Reports](docs/reports.png)
-```
 
 ---
 
