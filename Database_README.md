@@ -115,6 +115,7 @@ erDiagram
         varchar recommended_action_3
         timestamp scored_at
     }
+```
 
 ---
 
